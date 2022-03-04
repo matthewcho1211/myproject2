@@ -6,7 +6,10 @@ public class ScoringNG {
         int[] englishs = {90, 80, 70, 60};
         int[] maths = {97, 88, 77, 65};
         for (int i = 0; i < 4; i++) {
-            System.out.println(names[i]+"\t"+englishs[i]+"\t"+maths[i]+"\t"+(englishs[i]+maths[i])/2);
+            if(i != 2){
+                System.out.println(names[i]+"\t"+englishs[i]+"\t"+maths[i]+"\t"+(englishs[i]+maths[i])/2);
+            }
+
         }
     }
 }
