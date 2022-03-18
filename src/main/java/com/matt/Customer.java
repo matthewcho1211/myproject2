@@ -3,14 +3,14 @@ package com.matt;
 public class Customer {
     String name;
     int amount;
+    float off = 0.1f;
     public Customer(String name, int amount){
         this.name = name;
         this.amount = amount;
     }
-    public int discount(){
+    public float discount(){
         if(amount > 1000){
-            int dis = amount/1000;
-            return amount - 100*dis;
+            return amount - (amount/1000)*off*1000;
         }else{
             return amount;
         }
