@@ -8,3 +8,9 @@ com/matt/Scoring.java
  com.matt.Scoring
 com/matt/GraduateStudent.java
  com.matt.GraduateStudent
+com/matt/Shopping.java
+ com.matt.Shopping
+com/matt/Customer.java
+ com.matt.Customer
+com/matt/SilverCustomer.java
+ com.matt.SilverCustomer
