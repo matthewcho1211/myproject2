@@ -1,4 +1,4 @@
-package com.matt;
+package com.matt.score;
 
 public class GraduateStudent extends Student{
     int thesis;

@@ -1,4 +1,4 @@
-package com.matt;
+package com.matt.sales;
 
 public class SilverCustomer extends Customer{
     public SilverCustomer(String name, int amount){

@@ -1,16 +1,22 @@
-package com.matt;
+package com.matt.sales;
 
+
+import java.util.ArrayList;
 
 public class Shopping {
     public static void main(String[] args) {
+        ArrayList<Customer> list = new ArrayList<>();
         Customer c1 = new Customer("0001", 1200);
-        c1.print();
         Customer c2 = new Customer("0002", 800);
-        c2.print();
         SilverCustomer c3 = new SilverCustomer("0003", 2000);
-        c3.print();
         GoldCustomer c4 = new GoldCustomer("0004", 5000);
-        c4.print();
+        list.add(c1);
+        list.add(c2);
+        list.add(c3);
+        list.add(c4);
+        for(Customer c : list){
+            c.print();
+        }
 
     }
 }

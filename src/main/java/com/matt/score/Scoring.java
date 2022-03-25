@@ -1,4 +1,4 @@
-package com.matt;
+package com.matt.score;
 
 public class Scoring {
     public static void main(String[] args) {
