@@ -18,6 +18,6 @@ public class StudentTicket extends Ticket{
         return 0;
     }
     public void print(){
-        System.out.println(start.name + " to " + destination.name + "\t" + price()*amount);
+        System.out.println("student ticket"+"\t"+start.name + " to " + destination.name + "\t" + amount + "\t"+ price()*amount);
     }
 }

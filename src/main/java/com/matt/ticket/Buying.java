@@ -1,10 +1,12 @@
 package com.matt.ticket;
 
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Buying {
     public static void main(String[] args) {
+        ArrayList<Ticket> list = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         while(true){
             System.out.println("Your start station?(1: Taipei, 2: Taichung, 3: Kaohsiung)");
@@ -38,23 +40,30 @@ public class Buying {
                     end = Station.KAOHSIUNG_STATION;
                     break;
             }
-            System.out.println("choose type(1: normal, 2: student, 3: old)");
+            System.out.println("choose type(1: normal, 2: student, 3: old, 4:return)");
             int type = Integer.parseInt(scanner.next());
             System.out.println("how many: ");
             int n = Integer.parseInt(scanner.next());
             switch (type){
                 case 1:
                     Ticket ticket = new Ticket(begin, end, n);
-                    ticket.print();
+                    list.add(ticket);
                     break;
                 case 2:
                     StudentTicket studentTicket = new StudentTicket(begin, end, n);
-                    studentTicket.print();
+                    list.add(studentTicket);
                     break;
                 case 3:
                     GrandTicket grandTicket = new GrandTicket(begin, end, n);
-                    grandTicket.print();
+                    list.add(grandTicket);
+                    break;
+                case 4:
+                    ReturnTicket returnTicket = new ReturnTicket(begin, end, n);
+                    list.add(returnTicket);
             }
+        }
+        for(Ticket t : list){
+            t.print();
         }
     }
 }
