@@ -54,8 +54,8 @@ public class Buying {
                     list.add(studentTicket);
                     break;
                 case 3:
-                    GrandTicket grandTicket = new GrandTicket(begin, end, n);
-                    list.add(grandTicket);
+                    ElderTicket elderTicket = new ElderTicket(begin, end, n);
+                    list.add(elderTicket);
                     break;
                 case 4:
                     ReturnTicket returnTicket = new ReturnTicket(begin, end, n);
@@ -65,5 +65,6 @@ public class Buying {
         for(Ticket t : list){
             t.print();
         }
+
     }
 }

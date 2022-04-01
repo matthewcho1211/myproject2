@@ -12,11 +12,12 @@ public class StudentTicket extends Ticket{
             return 600*off;
         }else if(destination.id == 300 && start.id == 200|| start.id  == 300 && destination.id == 200){
             return 900*off;
-        } else if(distance == 200 || distance == -200){
+        }else if(distance == 200 || distance == -200){
             return 1500*off;
         }
         return 0;
     }
+
     public void print(){
         System.out.println("student ticket"+"\t"+start.name + " to " + destination.name + "\t" + amount + "\t"+ price()*amount);
     }
