@@ -7,6 +7,6 @@ public class ElderTicket extends StudentTicket{
     }
     @Override
     public void print(){
-        System.out.println("grand ticket"+"\t"+start.name + " to " + destination.name + "\t" + amount + "\t" + price()*amount);
+        System.out.println("elder ticket"+"\t"+start.name + " to " + destination.name + "\t" + amount + "\t" + price()*amount);
     }
 }
