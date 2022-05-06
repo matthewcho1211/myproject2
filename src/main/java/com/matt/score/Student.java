@@ -16,7 +16,7 @@ public class Student implements Printable{
 
         this("John Doe", -1, -1);
     }
-
+    @Override
     public void print(){
 
         System.out.print(name + "\t" + english + "\t" + math + "\t" + getAverage());

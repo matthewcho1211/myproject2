@@ -11,13 +11,14 @@ public class Ticket {
     }
 
     public float price(){
-        int distance = destination.id - start.id;
-        if(destination.id == 200 && start.id == 100|| start.id  == 200 && destination.id == 100){
-            return 600;
-        }else if(destination.id == 300 && start.id == 200|| start.id  == 300 && destination.id == 200){
-            return 900;
-        }else if(Math.abs(distance) == 200){
-            return 1500;
+        int diff = Math.abs(destination.id - start.id);
+        switch (diff){
+            case 100:
+                return 500;
+            case 200:
+                return 600;
+            case 300:
+                return 1100;
         }
         return 0;
     }

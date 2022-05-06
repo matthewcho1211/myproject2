@@ -16,4 +16,5 @@ public class MyClass implements MyInterface {
         return 0;
     }
 
+
 }
