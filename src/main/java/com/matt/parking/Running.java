@@ -5,8 +5,8 @@ import java.util.Date;
 public class Running {
     public static void main(String[] args) {
         String id = "ABC-1234";
-        String enterTime = "11:00";
-        String exitTime = "14:17";
+        String enterTime = "08:00";
+        String exitTime = "11:20";
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
         Date d = null;
         try {
@@ -29,10 +29,17 @@ public class Running {
             int diff = minutes%60;
             System.out.println("minutes: "+diff);
             int fee = hours*30;
-            if(diff >= 15 && diff <= 30){
-                fee += 15;
+            int fee2 = hours*30;
+
+            if(diff >= 15){
+                fee += 30;
             }
-            System.out.println(fee);
+            System.out.println("first fee: "+ fee);
+
+            if(diff >= 15 && diff <= 30){
+                fee2 += 15;
+            }
+            System.out.println("second fee: "+ fee2);
 
         } catch (Exception e) {
             System.out.println("exit wrong format");
