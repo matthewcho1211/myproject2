@@ -9,7 +9,6 @@ public class ScoringNG {
             if(i != 2){
                 System.out.println(names[i]+"\t"+englishs[i]+"\t"+maths[i]+"\t"+(englishs[i]+maths[i])/2);
             }
-
         }
     }
 }
