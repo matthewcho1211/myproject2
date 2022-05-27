@@ -1,5 +1,7 @@
 package com.matt.ui;
 
+import com.sun.source.tree.WhileLoopTree;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -23,16 +25,21 @@ public class GuessFrame extends JFrame {
         setVisible(true);
 
         button.addActionListener(new ActionListener() {
-            @Override
+            int times = 0;
             public void actionPerformed(ActionEvent actionEvent) {
+
                 int num = Integer.parseInt(number.getText());
                 if(num > secret){
-                    label.setText("smaller");
-                } else if(num < secret){
-                    label.setText("bigger");
-                } else{
-                    label.setText("bingo the secret number is "+secret);
+                    times += 1;
+                    label.setText("smaller"+" you guess "+ times +" times");
 
+                } else if(num < secret){
+                    times += 1;
+                    label.setText("bigger"+" you guess "+ times +" times");
+
+                } else{
+                    times += 1;
+                    label.setText("bingo the secret number is "+secret+" you guess "+ times +" times");
                 }
             }
         });
