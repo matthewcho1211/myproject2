@@ -15,13 +15,13 @@ public class MyWin {
         JButton button = new JButton("OK");
         button.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent actionEvent) {
+            public void actionPerformed(ActionEvent e) {
                 System.out.println("hi");
-            }
-        });
-      //  MyActionListener listener = new MyActionListener();
-      //  button.addActionListener(listener);
+            }     });
+//        MyActionListener listener = new MyActionListener();
+//        button.addActionListener(listener);
         frame.setLayout(new FlowLayout());
         frame.add(button);
+
     }
 }
