@@ -41,6 +41,7 @@ public class GuessFrame extends JFrame {
                     times += 1;
                     label.setText("bingo the secret number is "+secret+" you guess "+ times +" times");
                 }
+
             }
         });
 

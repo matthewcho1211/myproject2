@@ -1,9 +1,12 @@
 package com.matt.score;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.ArrayList;
 
 public class Scoring {
     public static void main(String[] args) {
+
         Student matt = new Student("Matt", 60, 70);
         Student rayy = new Student("Rayy", 59, 58);
         Student s = new Student();
